@@ -18,5 +18,7 @@ from django.urls import path, include
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("polls/", include('polls.urls'))
+    path("polls/", include('polls.urls'))  # include() принимает полный путь импорта пайтон к другому модулю URlconf
+                                           # необходимо всегда использовать include() при включении других шаблонов URL
+
 ]
